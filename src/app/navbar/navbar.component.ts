@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -12,9 +12,12 @@ export class NavbarComponent implements OnInit {
   myInputThird='third';
 
   @Input() person;
-
+  @Output() onYell = new EventEmitter();
   clickMe(val){
     console.log(val);
+  }
+  fireYell(){
+    this.onYell.emit();
   }
   constructor() { }
 
