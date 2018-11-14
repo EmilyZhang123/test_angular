@@ -1,0 +1,15 @@
+<p>
+  <!--属性绑定-->
+  navbar works!---{{navbar}}
+</p>
+模板绑定
+<input value={{myInputFirst}}/>----{{myInputFirst}}<br>
+属性绑定
+<input [value]="myInputSecond"/>----{{myInputSecond}}<br>
+双向绑定
+<input [(ngModel)]="myInputThird"/>----{{myInputThird}}<br>
+
+fromAPP@Input=={{person.name}}=={{person.title}}
+
+<button on-click="clickMe('ss')">btn1</button>
+<button (click)="clickMe('形参')">btn2</button>
